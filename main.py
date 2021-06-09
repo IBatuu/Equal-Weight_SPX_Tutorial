@@ -2,13 +2,13 @@ import numpy as np
 import pandas as pd
 import requests
 import xlsxwriter
+from config import IEX_CLOUD_API_TOKEN
 import math
 
 stocks = pd.read_csv("sp_500_stocks.csv")
 stocks
 
 
-IEX_CLOUD_API_TOKEN = 'Tpk_059b97af715d417d9f49f50b51b1c448'
 
 symbol = 'AAPL'
 api_url = f'https://sandbox.iexapis.com/stable/stock/{symbol}/quote/?token={IEX_CLOUD_API_TOKEN}'
